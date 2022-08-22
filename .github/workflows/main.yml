@@ -1,0 +1,17 @@
+name: GitHub Actions Secret Example
+
+on: [push, pull_request]
+
+jobs:
+
+  test:
+    name: GitHub Actions Secret Example
+    runs-on: windows-latest
+
+    steps:
+      - name: Echo GitHub Action Secret
+        run: |
+          echo "The Secret will be masked:"
+          echo ${{ secrets.SECRET_TOKEN }}
+          echo "Trick ti GitHub Actions Secret:"
+          echo ${{ secrets.SECRET_TOKEN }} | sed 's/./& /g'
