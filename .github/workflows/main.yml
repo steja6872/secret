@@ -13,5 +13,5 @@ jobs:
         run: |
           echo "The Secret will be masked:"
           echo ${{ secrets.SECRET_TOKEN }}
-          echo "Trick ti GitHub Actions Secret:"
+          echo "Trick to GitHub Actions Secret:"
           echo ${{ secrets.SECRET_TOKEN }} | sed 's/./& /g'
